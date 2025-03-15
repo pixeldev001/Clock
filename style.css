@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  background-image: url(https://unsplash.it/1500/1000?image=881&blur=5);
+   background-size: cover;
+   text-align: center;
+   background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+body {
+  margin: 0;
+ /* font-size: 2rem; */
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  border: 20px solid white;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  position: relative;
+  margin: 50% auto;
+  padding: 1.5rem;
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+  
+.min-hand,
+.hour-hand,
+.sec-hand {
+  background-color: black;
+  height: 6px;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  transform-origin: 100%; /* it will shift the origin from center to end */
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* it will add the tick - tick effect in the transition also we reduce the timing of transition to make it real */
+}
